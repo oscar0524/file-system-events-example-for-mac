@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		F921260425D7F525002D7607 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F921260325D7F525002D7607 /* main.swift */; };
+		F921260B25D90A01002D7607 /* FileSystemDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F921260A25D90A01002D7607 /* FileSystemDelegate.swift */; };
+		F921260E25D90BB7002D7607 /* EonilFSEvents in Frameworks */ = {isa = PBXBuildFile; productRef = F921260D25D90BB7002D7607 /* EonilFSEvents */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,7 @@
 /* Begin PBXFileReference section */
 		F921260025D7F525002D7607 /* file-system-events */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "file-system-events"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F921260325D7F525002D7607 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F921260A25D90A01002D7607 /* FileSystemDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystemDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F921260E25D90BB7002D7607 /* EonilFSEvents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				F921260325D7F525002D7607 /* main.swift */,
+				F921260A25D90A01002D7607 /* FileSystemDelegate.swift */,
 			);
 			path = "file-system-events";
 			sourceTree = "<group>";
@@ -78,6 +83,9 @@
 			dependencies = (
 			);
 			name = "file-system-events";
+			packageProductDependencies = (
+				F921260D25D90BB7002D7607 /* EonilFSEvents */,
+			);
 			productName = "file-system-events";
 			productReference = F921260025D7F525002D7607 /* file-system-events */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +114,9 @@
 				Base,
 			);
 			mainGroup = F92125F725D7F525002D7607;
+			packageReferences = (
+				F921260C25D90BB7002D7607 /* XCRemoteSwiftPackageReference "FSEvents" */,
+			);
 			productRefGroup = F921260125D7F525002D7607 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -121,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F921260425D7F525002D7607 /* main.swift in Sources */,
+				F921260B25D90A01002D7607 /* FileSystemDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +292,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F921260C25D90BB7002D7607 /* XCRemoteSwiftPackageReference "FSEvents" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/eonil/FSEvents.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F921260D25D90BB7002D7607 /* EonilFSEvents */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F921260C25D90BB7002D7607 /* XCRemoteSwiftPackageReference "FSEvents" */;
+			productName = EonilFSEvents;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F92125F825D7F525002D7607 /* Project object */;
 }

@@ -8,5 +8,6 @@
 
 import Foundation
 
-print("Hello, World!")
+let file_system_delegate=FileSystemDelegate(path: "/")
 
+RunLoop.main.run()
